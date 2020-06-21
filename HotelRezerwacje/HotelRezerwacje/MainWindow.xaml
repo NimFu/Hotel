@@ -1,0 +1,55 @@
+﻿<Window x:Class="HotelRezerwacje.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelRezerwacje"
+        mc:Ignorable="d"
+        Icon="/Obrazy/SmartHome.png"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Title="Hotel" Height="600" Width="500">
+
+    <Border Padding="10" Background="Azure">
+        <StackPanel Background="AntiqueWhite" >
+            <Image Source="/Obrazy/Image1.jpg" />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="20 20 0 0" Text="Rezerwuj Pokój" FontSize="20" FontWeight="Bold" Grid.Column="0" />
+                <Button x:Name="ReservationButton" Click="ReservationButton_Click" Grid.Column="1" Content="Przejdź" Margin="20 20 20 0"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="20 20 0 0" Text="Zarządaj Rezerwacją" FontSize="20" FontWeight="Bold" Grid.Column="0" />
+                <Button x:Name="EditionButton" Click="EditionButton_Click" Grid.Column="1" Content="Przejdź" Margin="20 20 20 0"/>
+
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="20 20 0 0" Text="Zarządzaj Hotelem" FontSize="20" FontWeight="Bold" Grid.Column="0" />
+                <Button x:Name="MenagmentButton" Click="MenagmentButton_Click" Grid.Column="1" Content="Przejdź" Margin="20 20 20 0"/>
+
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="20 20 0 0" Text="Wyświetl Rezerwacje" FontSize="20" FontWeight="Bold" Grid.Column="0" />
+                <Button x:Name="ShowResButton" Click="ShowResButton_Click" Grid.Column="1" Content="Przejdź" Margin="20 20 20 0"/>
+
+            </Grid>
+
+        </StackPanel>
+    </Border>
+</Window>

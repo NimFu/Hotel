@@ -1,0 +1,49 @@
+﻿<Window x:Class="HotelRezerwacje.AddReservation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelRezerwacje"
+        mc:Ignorable="d"
+        Icon="/Obrazy/SmartHome.png"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Title="Rezerwuj Pokój" Height="600" Width="400">
+    <Border Padding="10">
+        <StackPanel>
+            <TextBlock  Margin="0 10 0 0"  Text="Nazwisko"/>
+            <TextBox x:Name="SurnameText"  MaxLength="30" Padding="2"/>
+            <TextBlock Margin="0 10 0 0" Text="Numer Telefonu:"/>
+            <TextBox x:Name="NumberTelText" MaxLength="12" Padding="2" />
+            <TextBlock Margin="0 10 0 0" Text="Email"/>
+            <TextBox x:Name="EmailText"  MaxLength="30"  Padding="2"  />
+            <TextBlock Margin="0 10 0 0"  Text="Wybierz date pobytu:" />
+            <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock  Grid.Column="0" Margin="0 10 0 10"  Text="Początek:"  />
+                <Calendar x:Name="StartData" Grid.Column="0"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Grid.Column="1" Margin="0 10 0 10"  Text="Koniec:" />
+            <Calendar x:Name="EndData" Grid.Column="1"/>
+                </StackPanel>
+            </Grid>
+            <TextBlock Margin="0 10 0 0" Text="Hotel"/>
+            <ComboBox x:Name="HotelCB" Initialized="HotelCB_Initialized" SelectionChanged="HotelCB_SelectionChanged" DropDownClosed="HotelCB_DropDownClosed"     />
+            <TextBlock Margin="0 10 0 0" Text="Pokój:" />
+            <ComboBox x:Name="RoomCB" DropDownClosed="RoomCB_DropDownClosed"  />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="ResButton" Margin="20 20" Grid.Column="0"  Content="Rezerwuj" Click="ResButton_Click" />
+                <Button x:Name="CancelButton" Margin="20 20" Grid.Column="1" Content="Anuluj" Click="CancelButton_Click"/>
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>
